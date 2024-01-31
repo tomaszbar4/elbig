@@ -11,10 +11,6 @@ const customerReviews = [
     "Dobra jakość. Porządna rozdzielnica.",
     "Transakcja bez zarzutu.Polecam ",
     "Szybko i sprawnie , przesyłka dobrze zabezpieczona"
-
-
-
-
 ]
 
 export {
