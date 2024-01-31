@@ -4,15 +4,13 @@ import { CustomerReviews, Hero, Info, Services, Partners } from '@/components'
 
 export default function Home() {
 
-  if(typeof window !== "undefined") {
-
-  const [windowWidth, setWindowWidth] = useState(getWindowWidth())
-
-  function getWindowWidth() {
-    return window.innerWidth
-  }
+  const [windowWidth, setWindowWidth] = useState()
 
   useEffect(() => {
+    function getWindowWidth() {
+      return window.innerWidth
+    }
+
     function handleResize() {
       setWindowWidth(getWindowWidth());
     }
@@ -21,15 +19,14 @@ export default function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-}
   
   return (
     <main>
         <Hero/>
         <Info/>
         <Services/>
-        <CustomerReviews windowWidth={windowWidth || undefined}/>
-        <Partners windowWidth={windowWidth || undefined}/>
+        <CustomerReviews windowWidth={windowWidth}/>
+        <Partners windowWidth={windowWidth}/>
     </main>
   )
 }
