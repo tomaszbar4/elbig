@@ -1,6 +1,8 @@
 "use client"
-import React, {useEffect, useState} from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   "/eaton.png",
@@ -11,59 +13,46 @@ const images = [
   "/hager.png",
   "/legrand.png",
   "/siemens.png"
-]
+];
 
 export default function Partners({windowWidth}) {
-
-  const [index, setIndex] = useState(0)
-  const [number, setNumber] = useState(undefined)
-
-    function updateIndex() {
-
-        let reversedNumber
-        reversedNumber = number !==4 ? reversedNumber = number === 6 ? 2 : 6 : 4
-        if(index<reversedNumber) 
-        {
-        setIndex(oldValue => oldValue + 1)
+  // Slider settings
+  const settings = {
+    dots: false, 
+    infinite: true,
+    speed: 500,
+    slidesToShow: 6, 
+    slidesToScroll: 1,
+    autoplay: true, 
+    autoplaySpeed: 2500,
+    arrows: false, 
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
         }
-        else {
-         setIndex(0)
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 3,
         }
-      
       }
-
-    useEffect(() => {
-      setTimeout(() => {
-        updateIndex()
-      }, 3000)
-    }, [index])
-
-    useEffect(() => {
-      if(windowWidth<640) {
-        setNumber(2)
-      }
-      else if (windowWidth<1024) {
-        setNumber(4)
-      }
-      else {
-        setNumber(6)
-      }
-    }, [windowWidth])
-
+    ]
+  };
 
   return (
-    <section className="bg-white">
-        <div className="mx-auto py-12 overflow-hidden w-[20rem] sm:w-[40rem] lg:w-[60rem]">
-          <div className="lg:w-full flex transition-translate duration-300"
-          style={{translate: `${-100/number * index}%`}}
-          >
-            {images.map(image => (
-              <img 
-              key={image}
-              src={image} alt="Partner logo" className="w-32 object-contain mx-4"/>
-            ))}
-          </div>
-        </div>
+    <section className="bg-white overflow-hidden">
+      <div className="mx-auto w-[20rem] sm:w-[40rem] lg:w-[60rem]">
+        <Slider {...settings}>
+          {images.map(image => (
+            <div key={image} className="px-4">
+              <img src={image} alt="Partner logo" className="w-32 h-32 object-contain m-auto"/>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </section>
-  )
+  );
 }

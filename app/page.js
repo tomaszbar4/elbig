@@ -1,7 +1,6 @@
 "use client"
 import React, {useState, useEffect} from 'react'
-import { CustomerReviews, Hero, Info, Services, Partners } from '@/components'
-
+import { CustomerReviews, Hero, Info, Services, Partners, Test } from '@/components'
 export default function Home() {
 
   const [windowWidth, setWindowWidth] = useState()

@@ -1,60 +1,69 @@
-"use client"
-import React, { useState, useEffect } from 'react'
-import { ReviewItem } from '@/components'
-import { customerReviews } from '@/constants/data'
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+// First, ensure you have react-slick and slick-carousel installed in your project:
+// npm install react-slick slick-carousel
+
+"use client";
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { ReviewItem } from '@/components';
+import { customerReviews } from '@/constants/data';
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 
-export default function CustomerReviews({windowWidth}) {
+export default function CustomerReviews() {
 
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const NextArrow = ({onClick, className}) => (
+        <button
+        onClick={onClick}
+        className="bg-red-700 absolute -bottom-16 left-1/2 text-3xl translate-x-1">
+        <MdChevronRight/>
+        </button>
+    )
 
-    function furtherReviews() {
-        if(currentIndex<customerReviews.length-3)
-        setCurrentIndex(oldIndex => oldIndex + 1)
-        else {
-        setCurrentIndex(0)
-        }
-    }
+    const PrevArrow = ({onClick, className}) => (
+        <button
+        onClick={onClick}
+        className="bg-red-700 absolute -bottom-16 right-1/2 -translate-x-1 text-3xl">  
+        <MdChevronLeft/>
+        </button>
+    )
 
-    function previousReviews() {
-        if(currentIndex>0)
-        setCurrentIndex(oldIndex => oldIndex - 1)
-        else {
-            setCurrentIndex(customerReviews.length-3)
-        }
-    }
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
 
-    const [number, setNumber] = useState(windowWidth < 1024 ? -100 : -33)
-
-      useEffect(() => {
-        setNumber(windowWidth < 1024 ? -100 : -(100/3))
-      }, [windowWidth])
-
-      
-
-  return (
-    <section className="overflow-hidden w-full h-[40rem] relative" >
-        <img src="/happy-customer.jpg" alt="Happy customer" className="w-full h-full object-cover"/>
-        <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">
-            <p className="uppercase text-red-500 font-bold">Opinie klientów</p>
-            <h4 className="font-bold text-3xl mb-8">Co mówią o nas klienci?</h4>
-            <div className="w-[20.5rem] lg:w-[61.5rem] overflow-hidden transition-translate duration-200">
-            <div className={`w-full py-12 relative flex transition-translate duration-500`}
-            style={{translate: `${number * currentIndex}%`}}
-            >
-            {customerReviews.map(review => (
-                <ReviewItem 
-                key={review}
-                text={review}/>
-            ))}
-        </div>
-        </div>
-        <div className="flex gap-2">
-        <button onClick={previousReviews} className="text-base bg-white/70 text-black rounded-full p-2 flex items-center justify-center"><FaChevronLeft/></button>
-        <button onClick={furtherReviews} className="text-base bg-white/70 text-black rounded-full p-2 flex items-center justify-center "><FaChevronRight/></button>
-        </div>
-        </div>
-    </section>
-  )
+    return (
+        <section className="w-full h-[40rem] relative overflow-hidden">
+            <img src="/happy-customer.jpg" alt="Happy customer" className="w-full h-full object-cover"/>
+            <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">
+                <p className="uppercase text-red-500 font-bold">Opinie klientów</p>
+                <h4 className="font-bold text-3xl mb-8">Co mówią o nas klienci?</h4>
+                <div className="py-5 w-11/12 min-[400px]:w-[25rem] min-[1280px]:w-[70rem]">
+                    <Slider {...settings} className="w-full ">
+                        {customerReviews.map((review, index) => (
+                            <div key={index} className="px-1.5 overflow-visible">
+                                <ReviewItem text={review}/>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
+            </div>
+        </section>
+    );
 }
