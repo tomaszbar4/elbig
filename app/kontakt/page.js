@@ -69,7 +69,7 @@ export default function Kontakt() {
 
 	return (
 		<main className="text-gray-900 max-w-[150rem] mx-auto bg-gray-50 overflow-hidden">
-			<SmallHero/>
+			<SmallHero img="/contact.jpg" text="KONTAKT"/>
 			<div className="max-w-[80rem] mx-auto py-8 lg:py-16 px-6 2xl:px-0 ">
 				<div className="grid gap-8 lg:grid-cols-2 ">
 					<div className="flex flex-col gap-4 ">

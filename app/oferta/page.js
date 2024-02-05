@@ -1,11 +1,11 @@
 import React from 'react'
-import { ServiceItem } from '@/components'
+import { ServiceItem, SmallHero } from '@/components'
 
-
-export default function Services() {
+const Oferta = () => {
   return (
-    <section className="bg-gray-100 p-6 py-12 xl:px-0">
-        <div className="max-w-[80rem] mx-auto">
+    <main className="bg-gray-50">
+        <SmallHero text="OFERTA"/>
+        <div className="max-w-[80rem] mx-auto py-24 px-6 xl:px-0">
         <p className="uppercase text-red-500 font-bold text-center">Czym się zajmujemy</p>
         <h4 className="font-bold text-4xl mb-8 text-center text-gray-950">Nasza oferta</h4>
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -49,8 +49,30 @@ export default function Services() {
             img="/rozdzielnice_licznikowe.png"
             link="/rozdzielnice-licznikowe"
             />
+            <ServiceItem 
+            title="Rozdzielnice do stacji transformatorowej"
+            img="/rozdzielnica_do_stacji.jpg"
+            link="/kompensacja-mocy-biernej"
+            />
+            <ServiceItem 
+            title="Rozdzielnice przeciwpożarowego wyłącznika prądu"
+            img="/rozdzielnica_przeciwpozarowego.jpg"
+            link="/szafy-sterownicze"
+            />
+            <ServiceItem 
+            title="Rozdzielnice do zabudowy (skrzynki elektryczne)"
+            img="/rozdzielnice_do_zabudowy.png"
+            link="/rozdzielnice-elektryczne"
+            />
+            <ServiceItem 
+            title="Frezowanie CNC"
+            img="/frezowanie.png"
+            link="/frezowanie-cnc"
+            />
         </div>
         </div>
-    </section>
+    </main>
   )
 }
+
+export default Oferta

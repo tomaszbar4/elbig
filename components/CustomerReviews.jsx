@@ -54,10 +54,10 @@ export default function CustomerReviews() {
             <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">
                 <p className="uppercase text-red-500 font-bold">Opinie klientów</p>
                 <h4 className="font-bold text-3xl mb-8">Co mówią o nas klienci?</h4>
-                <div className="py-5 w-11/12 min-[400px]:w-[25rem] min-[1280px]:w-[70rem]">
-                    <Slider {...settings} className="w-full ">
+                <div className="w-11/12 min-[400px]:w-[25rem] min-[1280px]:w-[70rem]">
+                    <Slider {...settings} className="w-full">
                         {customerReviews.map((review, index) => (
-                            <div key={index} className="px-1.5 overflow-visible">
+                            <div key={index} className="px-2 py-4">
                                 <ReviewItem text={review}/>
                             </div>
                         ))}

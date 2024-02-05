@@ -11,6 +11,7 @@ import ReviewItem from "./ReviewItem";
 import ServiceItem from "./ServiceItem";
 import Partners from './Partners'
 import SmallHero from "./SmallHero";
+import CheckInShopBtn from "./CheckInShopBtn";
 
 export {
     Navbar,
@@ -25,5 +26,6 @@ export {
     ReviewItem,
     ServiceItem,
     Partners,
-    SmallHero
+    SmallHero,
+    CheckInShopBtn
 }

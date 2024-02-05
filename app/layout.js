@@ -15,10 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <main className="max-w-[150rem] mx-auto">
         <Navbar />
         {children}
         <SpeedInsights/>
         <Footer />
+        </main>
       </body>
     </html>
   );

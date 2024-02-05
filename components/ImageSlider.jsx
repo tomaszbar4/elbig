@@ -58,6 +58,19 @@ const ImageSlider = ({imageUrls}) => {
         ))}
             <button onClick={previousImg} className="absolute top-1/2 -translate-y-1/2 left-2 z-10 text-3xl p-2 bg-black/50 rounded-full"><MdChevronLeft/></button>
             <button onClick={nextImg} className="absolute top-1/2 -translate-y-1/2 right-2 z-10 text-3xl p-2 bg-black/50 rounded-full"><MdChevronRight/></button>
+            <button 
+            onClick={() => setCurrentImg(0)}
+            className={currentImg === 0
+            ? "absolute bottom-4 right-1/2 -transalte-x-1 w-3 h-3 bg-white/100 rounded-full transition-all duration-200"
+            :
+            "absolute bottom-4 right-1/2 -transalte-x-1 w-3 h-3 bg-white/50 rounded-full transition-all duration-200"
+            }/>
+            <button 
+            onClick={() => setCurrentImg(1)}
+            className={currentImg === 1
+            ? "absolute bottom-4 left-1/2 translate-x-1 w-3 h-3 bg-white/100 rounded-full transition-all duration-200"
+            : "absolute bottom-4 left-1/2 translate-x-1 w-3 h-3 bg-white/50 rounded-full transition-all duration-200"
+            }/>
 
     </div>
   )
