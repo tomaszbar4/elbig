@@ -56,8 +56,8 @@ const ImageSlider = ({imageUrls}) => {
                 </div>
             </div>
         ))}
-            <button onClick={previousImg} className="absolute top-1/2 -translate-y-1/2 left-2 z-10 text-3xl p-2 bg-black/50 rounded-full"><MdChevronLeft/></button>
-            <button onClick={nextImg} className="absolute top-1/2 -translate-y-1/2 right-2 z-10 text-3xl p-2 bg-black/50 rounded-full"><MdChevronRight/></button>
+            <button onClick={previousImg} className="absolute top-1/2 -translate-y-1/2 left-2 z-10 text-3xl p-2 bg-black/50 rounded-full text-white"><MdChevronLeft/></button>
+            <button onClick={nextImg} className="absolute top-1/2 -translate-y-1/2 right-2 z-10 text-3xl p-2 bg-black/50 rounded-full text-white"><MdChevronRight/></button>
             <button 
             onClick={() => setCurrentImg(0)}
             className={currentImg === 0

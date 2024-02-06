@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-    <header className="bg-gray-900">
+    <header className="bg-gray-900 text-white">
       <div className="max-w-[80rem] mx-auto flex justify-between items-center">
         <div className="flex gap-3 p-3">
           <Link href="https://www.google.com/maps/dir//El-Big+Reviews/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x47112984b496b8a3:0xa78092697a8adc33?sa=X&ved=2ahUKEwjJiaKo6IeEAxVcSPEDHYpQBmcQ9Rd6BAg8EAA&hl=en-PL" 
@@ -33,7 +33,7 @@ const Navbar = () => {
             <span className="hidden lg:block hover:text-gray-400 transition-colors duration-200">+48 32 450 06 40</span>
             </Link>
         </div>
-        <div className="bg-red-500 p-4 h-full flex gap-3 ">
+        <div className="bg-red-500 p-4 h-full flex gap-3">
           <Link href="https://www.facebook.com/rozdzielnice.elektryczne" className="hover:text-gray-800 transition-colors duration-200">
             <FaFacebookF />
           </Link>
