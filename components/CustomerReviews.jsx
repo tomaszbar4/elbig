@@ -54,8 +54,8 @@ export default function CustomerReviews() {
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         viewport={{once: true}}
-        transition={{delay: 0.5}}
-        className="w-full h-[40rem] relative overflow-hidden text-white">
+        transition={{delay: 0.25}}
+        className="w-full h-[40rem] relative overflow-hidden text-white bg-white">
             <img src="/happy-customer.jpg" alt="Happy customer" className="w-full h-full object-cover"/>
             <div 
             className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">

@@ -41,9 +41,12 @@ const Hero = () => {
   ]
 
   return (
-    <section className="relative bg-red-500">
+    <motion.section 
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    className="relative bg-white">
         <ImageSlider imageUrls={heroContent}/>
-    </section>
+    </motion.section>
   )
 }
 
