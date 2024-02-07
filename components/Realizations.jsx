@@ -12,7 +12,9 @@ export default function Realizations() {
             heading={item.heading} 
             paragraph={item.paragraph} 
             image={item.image}
-            rotate={idx===8 ? true : false}/>
+            rotate={idx===8 ? true : false}
+            delay={idx/4}
+            />
         ))}
     </section>
   )

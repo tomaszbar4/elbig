@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { ReviewItem } from '@/components';
 import { customerReviews } from '@/constants/data';
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { motion } from 'framer-motion';
 
 
 export default function CustomerReviews() {
@@ -49,21 +50,29 @@ export default function CustomerReviews() {
     };
 
     return (
-        <section className="w-full h-[40rem] relative overflow-hidden text-white">
+        <motion.section 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        viewport={{once: true}}
+        transition={{delay: 0.5}}
+        className="w-full h-[40rem] relative overflow-hidden text-white">
             <img src="/happy-customer.jpg" alt="Happy customer" className="w-full h-full object-cover"/>
-            <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">
+            <div 
+            className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-center items-center bg-black/70">
                 <p className="uppercase text-red-500 font-bold">Opinie klientów</p>
                 <h4 className="font-bold text-3xl mb-8">Co mówią o nas klienci?</h4>
                 <div className="w-11/12 min-[400px]:w-[25rem] min-[1280px]:w-[70rem]">
                     <Slider {...settings} className="w-full">
                         {customerReviews.map((review, index) => (
-                            <div key={index} className="px-2 py-4">
+                            <div 
+                            key={index} 
+                            className="px-2 py-4">
                                 <ReviewItem text={review}/>
                             </div>
                         ))}
                     </Slider>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

@@ -5,6 +5,7 @@ import { FiPhoneCall, FiMail } from 'react-icons/fi'
 import Link from 'next/link'
 import Image from 'next/image'
 import { SmallHero } from '@/components'
+import { motion } from 'framer-motion'
 
 export default function Kontakt() {
 
@@ -72,7 +73,12 @@ export default function Kontakt() {
 			<SmallHero img="/contact.jpg" text="KONTAKT"/>
 			<div className="max-w-[80rem] mx-auto py-8 lg:py-16 px-6 2xl:px-0 ">
 				<div className="grid gap-8 lg:grid-cols-2 ">
-					<div className="flex flex-col gap-4 ">
+					<motion.div 
+					initial={{opacity: 0, x: -50}}
+					whileInView={{opacity: 1, x: 0}}
+					viewport={{once: true}}
+					transition={{delay: 0.25}}
+					className="flex flex-col gap-4 ">
 						<h5 className="text-lg font-medium text-red-500">Kontakt</h5>
 						<h4 className="mb-2 text-2xl font-black text-gray-700 uppercase sm:text-3xl lg:text-4xl ">Napisz do nas wiadomość</h4>
 						<p className="mb-2 text-gray-600">Jeśli masz jakieś pytania dotyczące naszych usług, bądź chciałbyś uzyskać bardziej
@@ -114,12 +120,17 @@ export default function Kontakt() {
 							</div>
 						</Link>
 
-					</div>
-					<div className="relative">
+					</motion.div>
+					<motion.div 
+					initial={{opacity: 0, x: 50}}
+					whileInView={{opacity: 1, x: 0}}
+					viewport={{once: true}}
+					transition={{delay: 0.25}}
+					className="relative">
 						<div className="absolute z-0 -left-10 lg:left-0 -bottom-6 sm:left-14 w-36 h-36 pattern-dots pattern-blue-500 pattern-bg-gray-50 pattern-size-4 pattern-opacity-100 "></div>
 						<div className="absolute z-0 lg:-right-2 -right-8 -top-8 sm:right-14 w-36 h-36 pattern-dots pattern-yellow-400 pattern-bg-gray-50 pattern-size-4 pattern-opacity-100 "></div>
 						<ContactForm />
-					</div>
+					</motion.div>
 
 				</div>
 			</div>
