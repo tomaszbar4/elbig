@@ -63,7 +63,7 @@ const RozdzielniceElektryczne = () => {
         <img src="/oferta_elektryczne.png" alt="Rozdzielnice budowlane" className="w-full max-w-[25rem] mb-8"/>
         <p>Firma EL-BIG specjalizuje się w prefabrykacji różnego typu rozdzielnic elektrycznych, które wykonujemy zgodnie z obowiązującymi normami i zaleceniami. Każda rozdzielnica poddawana jest szczegółowym pomiarom i testom powykonawczym na podstawie których opracowywane są protokoły pomiarowe oraz potwierdza się spełnienie wymogów obowiązujących norm technicznych- deklaracja zgodności.</p>
         <p>Oferujemy prefabrykacje rozdzielnic w pełnym zakresie prądowym i w różnych wykonaniach, na podstawie dostarczonej dokumentacji technicznej, bądź szczegółowych uzgodnień z klientem. Wykonujemy urządzenia rozdzielcze różnych typów: pomiarowe, sterownicze i specjalne w obudowach meatlowych i z tworzyw sztucznych SMC wykorzystując aparaturę sprawdzonych na rynku producentów.</p>
-        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Rozdzielnice-budowlane-RB/13"/>
+        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl"/>
         </div>
         <div className="flex flex-col justify-center items-center w-full xl:w-1/2">
         <ul className="bg-gray-200 flex flex-col my-2 md:mr-auto transition-all duration-200">

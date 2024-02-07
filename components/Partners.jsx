@@ -15,7 +15,7 @@ const images = [
   "/siemens.png"
 ];
 
-export default function Partners({windowWidth}) {
+export default function Partners() {
   // Slider settings
   const settings = {
     dots: false, 
@@ -47,7 +47,7 @@ export default function Partners({windowWidth}) {
       <div className="mx-auto w-[20rem] sm:w-[40rem] lg:w-[60rem]">
         <Slider {...settings}>
           {images.map(image => (
-            <div key={image} className="px-4">
+            <div key={image} className="px-4 mt-2">
               <img src={image} alt="Partner logo" className="w-32 h-32 object-contain m-auto"/>
             </div>
           ))}

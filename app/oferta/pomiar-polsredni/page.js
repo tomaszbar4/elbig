@@ -11,7 +11,7 @@ const PomiarPolsredni = () => {
         <p>W złączach pomiaru półpośredniego w zależności od potrzeb klienta montujemy tablice licznikowe, liczniki, listwy kontrolno-pomiarowe, przekładniki, rozłączniki izolacyjne, wyłączniki nadprądowe, podstawy bezpiecznikowe, listwy zaciskowe tworząc dowolne konfiguracje we wszystkich układach połączeń.</p>
         <p>W naszej standardowej ofercie proponujemy złącza pomiaru półpośredniego w obudowie na bazie izolacyjnego trudnopalnego i samogasnącego kompozytu (poliester+włókno szklane) w kolorze RAL7035 odznaczajacym się odpornością na działanie warunków atmosferycznych UV. Na życzenie złącza pomiaru półpośredniego możemy dostosować do montażu naściennego, nasłupowego, wolnostojącego lub na fundamencie do wkopania w ziemię.</p>
         <p>Wszystkie prefabrykowane przez nas złącza pomiaru półpośredniego wraz ze stosowanymi rozwiązaniami technicznymi są zgodne z normami i wytycznymi działów standaryzacji zakładów energetycznych poszczególnych rejonów na obszar których prowadzimy dystrybucję naszych wyrobów. Każde z oferowanych przez nas złączy kablowych posiada wszelkie wymagane certyfikaty oraz deklarację zgodności.</p>
-        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Rozdzielnice-budowlane-RB/13"/>
+        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Pomiar-polposredni-1PP/53"/>
         </div>
         <div className="flex flex-col justify-center items-center w-1/2">
             <img src="/foto-oferta-pomiarpolsredni.jpg" alt="Pomiar półśredni" className="w-full max-w-[30rem]"/>

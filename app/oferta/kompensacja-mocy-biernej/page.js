@@ -36,6 +36,7 @@ const KompensacjaMocyBiernej = () => {
         <img src="/kompensacja7.jpg" alt="Licznik" className="w-full max-w-[20rem]"/>
         <p>Zapraszamy do skorzystania z poniższego konfiguratora lub bezpośredni kontakt z naszym biurem. Przeprowadzimy dla Państwa audyt i pomożemy w doborze optymalnego rozwiązania – rozdzielnicy do automatycznej kompensacji mocy biernej.</p>
         <img src="/kompensacja8.jpg" alt="Licznik" className="w-full max-w-[15rem]"/>
+        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Kompensacja-mocy-biernej/54"/>
         </section>
     </main>
   )

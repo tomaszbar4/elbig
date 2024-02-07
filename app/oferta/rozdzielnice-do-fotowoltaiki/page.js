@@ -25,7 +25,7 @@ const RozdzielniceDoFotowoltaiki = () => {
         <span className="font-bold">Seria rozdzielnic RPV(T1+T2)</span> przeznaczona jest do ochrony instalacji fotowoltaicznych: stringów, modułów PV oraz falowników/inwerterów przed przepięciami pochodzącymi z wyładowań atmosferycznych pośrednich lub bezpośrednich.Rozdzielnice serii RPV/(T1+T2) stosujemy w przypadku kiedy budynek wyposażony jest w instalację odgromową (piorunochron) i nie można zachować przewidzianych przepisami normy odstępów izolacyjnych pomiędzy instalacją fotowoltaiczną i odgromową.
         </li>
         </ul>
-        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Rozdzielnice-budowlane-RB/13"/>
+        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Rozdzielnice-do-fotowoltaiki-RPV/39"/>
         </div>
         <div className="flex flex-col justify-center items-center w-1/2">
             <img src="/foto-oferta-fotowoltaika.jpg" alt="Pomiar półśredni" className="w-full max-w-[30rem]"/>

@@ -12,6 +12,10 @@ const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
+  function toggleHamburger() {
+    setIsOpen(value => !value)
+  }
+
   return (
     <>
     <header className="bg-gray-900 text-white">
@@ -45,7 +49,7 @@ const Navbar = () => {
       <div className="bg-white">
         <nav className="flex items-center justify-between max-w-[80rem] mx-auto py-5 px-6">
           <div>
-            <Image src="/logo.png" alt="Elbig logo" width={120} height={120} />
+            <img src="/logo.png" alt="Elbig logo" className="w-32" />
           </div>
           <div className="gap-4 uppercase font-bold text-gray-950 hidden md:flex">
             <Link href="/"
@@ -54,7 +58,7 @@ const Navbar = () => {
             <Link href="/oferta"
             className="hover:text-blue-500"
             >Oferta</Link>
-            <Link href="/"
+            <Link href="/realizacje"
             className="hover:text-blue-500"
             >Realizacje</Link>
             <Link href="/kontakt"
@@ -68,7 +72,7 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
-    <NavbarMobile isOpen={isOpen}/>
+    <NavbarMobile isOpen={isOpen} toggleHamburger={toggleHamburger}/>
     </>
   );
 };

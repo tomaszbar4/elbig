@@ -26,7 +26,7 @@ const FrezowanieCnc = () => {
         </ul>
         <p>Usługę obróbki materiałów wykonujemy na podstawie dostarczonego przez klienta wzoru i/lub dokumentacji technicznej na materiałach własnych lub powierzonych. Posiadamy duże możliwości techniczne oraz bogate doświadczenie w dziedzinie frezowania CNC także w obróbce materiałów trudno obrabialnych. Dzięki temu jesteśmy w stanie wykonać bardzo precyzyjnie każdy detal w krótkim czasie. Wyróżnia nas precyzja i powtarzalność procesu.</p>
         <p>Zapraszamy do kontaktu z nami, aby zapoznać się ze szczegółami naszej oferty na frezowanie CNC. Firma EL-BIG Tarnowskie Góry – Śląsk.</p>
-        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl/pl/c/Rozdzielnice-budowlane-RB/13"/>
+        <CheckInShopBtn link="https://www.rozdzielnie-elektryczne.com.pl"/>
         </div>
         <div className="flex xl:flex-col justify-center items-center w-full xl:w-1/2 gap-2 p-6">
             <img src="/cnc1.jpg" alt="Frezowanie cnc zdjęcie" className="w-1/2 xl:w-2/3  aspect-[16/11]"/>

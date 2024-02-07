@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdChevronRight } from "react-icons/md";
+import { TiShoppingCart } from "react-icons/ti";
 import Image from 'next/image';
 
 const Footer = () => {
@@ -17,14 +18,14 @@ const Footer = () => {
 
   return (
    <footer className="bg-gray-950">
-    <div className="flex flex-col sm:flex-row gap-4 p-4 py-8 max-w-[90rem] mx-auto text-gray-300 justify-center">
+    <div className="flex flex-col sm:flex-row gap-8 p-4 py-8 max-w-[90rem] mx-auto text-gray-300 justify-center">
     <div className="">
       <h3 className="text-2xl uppercase mb-4 font-bold">O nas</h3>
       <Line/>
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-3">
         <MdEmail  className="border-[0.1rem] w-12 h-12 p-2.5 rounded-xl border-gray-700"/>
-        <Link href="/" className="flex flex-col">
+        <Link href="mailto:biuro@elbig.com.pl" className="flex flex-col">
           <span className="font-medium uppercase text-gray-600">Adres E-mail</span>
           <span>biuro@elbig.com.pl</span>
         </Link>
@@ -54,6 +55,14 @@ const Footer = () => {
         Złącza kablowe</li>
     </ul>
     </div>
+    </div>
+    <div>
+    <h3 className="text-2xl uppercase mb-4 font-bold">SKLEP</h3>
+    <Link href="https://www.rozdzielnie-elektryczne.com.pl/"
+    className="flex items-center gap-2"
+    >
+      <TiShoppingCart />
+      rozdzielnie-elektryczne.com.pl</Link>
     </div>
     </div>
       <div className="border-t-[0.1rem] border-gray-800 text-center p-3">

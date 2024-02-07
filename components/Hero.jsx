@@ -1,8 +1,8 @@
 "use client"
-import React from 'react'
 import Image from 'next/image'
 import { ImageSlider } from '@/components'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 
 const Hero = () => {
@@ -18,8 +18,8 @@ const Hero = () => {
       className="lg:pl-24 text-center lg:text-left z-10 px-6 lg:px-0 text-white">
       <h1 className="font-black uppercase text-2xl md:text-3xl lg:text-5xl mb-4">Prefabrykacja 
       <span className="text-red-500"> rozdzielnic elektrycznych</span></h1>
-      <p className="mb-4 font-medium text-lg px-8 lg:px-0">Jesteśmy na rynku już od 25 lat, dzięki czemu doskonale wiemy czego potrzebuje klient.</p>
-      <button className="uppercase font-semibold py-3 px-8 border-2">Odwiedź nasz sklep</button>
+      <p className="mb-8 font-medium text-lg px-8 lg:px-0">Jesteśmy na rynku już od 25 lat, dzięki czemu doskonale wiemy czego potrzebuje klient.</p>
+      <Link href="https://www.rozdzielnie-elektryczne.com.pl/" className="uppercase font-semibold py-3 px-8 border-2">Odwiedź nasz sklep</Link>
       </motion.div>
       ),
       url: 'hero.jpg'
