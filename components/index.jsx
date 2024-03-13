@@ -14,6 +14,7 @@ import SmallHero from "./SmallHero"
 import CheckInShopBtn from "./CheckInShopBtn"
 import RealizationItem from "./RealizationItem"
 import Realizations from "./Realizations"
+import ContactForm from "./ContactForm"
 
 export {
     Navbar,
@@ -31,5 +32,6 @@ export {
     SmallHero,
     CheckInShopBtn,
     RealizationItem, 
-    Realizations
+    Realizations,
+    ContactForm
 }

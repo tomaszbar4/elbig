@@ -3,6 +3,7 @@ import { CustomerReviews, Hero, Info, Services, Partners, Test } from '@/compone
 export default function Home() {
 
   return (
+
     <main>
         <Hero/>
         <Info/>

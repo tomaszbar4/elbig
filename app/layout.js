@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <SpeedInsights/>
         <Footer />
         </main>
+        <script src="https://smtpjs.com/v3/smtp.js"/>
       </body>
     </html>
   );

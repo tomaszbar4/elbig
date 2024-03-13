@@ -58,6 +58,7 @@ const Footer = () => {
     </div>
     <div>
     <h3 className="text-2xl uppercase mb-4 font-bold">SKLEP</h3>
+    <Line/>
     <Link href="https://www.rozdzielnie-elektryczne.com.pl/"
     className="flex items-center gap-2"
     >
